@@ -20,6 +20,9 @@ provider: flixhq
 # Leave empty to use home directory
 dl_path: "/home/swarn/dl"
 
+# The language preference given to youtube
+# Leave empty to let youtube decide
+yt_language: "en"
 # Quality selection (default: empty = show fzf prompt to pick quality)
 # Set to "best" to automatically select the highest available quality.
 # quality: best
