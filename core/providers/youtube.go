@@ -49,7 +49,7 @@ func (y *YouTube) Search(query string) ([]core.SearchResult, error) {
 	v := url.Values{}
 	v.Set("search_query", query)
 	req, _ := y.newRequest("GET", YOUTUBE_SEARCH_URL+"?"+v.Encode())
-	
+
 	resp, err := y.Client.Do(req)
 	if err != nil {
 		return nil, err
