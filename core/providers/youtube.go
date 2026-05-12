@@ -34,15 +34,15 @@ func (y *YouTube) newRequest(method, url string) (*http.Request, error) {
 		req.Header.Set(
 		"User-Agent",
 		"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-	)
+		)
 	cfg := core.LoadConfig()
 	if(cfg.YtLang != ""){
-	req.Header.Set(
-		"Accept-Language",
-		cfg.YtLang,
-	)
-}
-return req, nil
+		req.Header.Set(
+			"Accept-Language",
+			cfg.YtLang,
+		)
+	}
+	return req, nil
 }
 
 func (y *YouTube) Search(query string) ([]core.SearchResult, error) {
